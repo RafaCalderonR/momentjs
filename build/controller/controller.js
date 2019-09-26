@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const momentService_1 = require("../service/momentService");
+const diffDates = (date, date2) => momentService_1.calculateDifferenceDays(date, date2);
+exports.diffDates = diffDates;
+const sumDates = (date, untimes) => momentService_1.addTimeToDate(date, untimes);
+const setDateEmployee = (name) => momentService_1.updateDataEmployee(name);
+exports.setDateEmployee = setDateEmployee;
+const SunDiffDate = () => { };
+exports.SunDiffDate = SunDiffDate;

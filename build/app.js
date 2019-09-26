@@ -1,0 +1,13 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const controller_1 = require("./controller/controller");
+const employees_1 = require("./data/employees");
+const untimes = { "year": 5 };
+const now = "04/09/2013 15:00:00";
+const then = "04/09/2014 14:20:30";
+const sumPru = ["2d"];
+const name = 'Maria';
+//const a = moment('2016-01-01'); 
+//console.log(diffDates(now, then));
+controller_1.setDateEmployee('Maria');
+console.log(employees_1.monkingData);

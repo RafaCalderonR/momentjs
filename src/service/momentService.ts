@@ -3,7 +3,7 @@ import { DATEFORMAT } from '../data/constant';
 import { monkingData } from '../data/employees';
 import { error } from '../utils/utils';
 
-const all: Array<moment.Moment> = [];
+const allMoments: Array<moment.Moment> = [];
 const allDistances = new Set();
 
 const calculateDifferenceDays = (date1: string, date2: string) =>
@@ -39,8 +39,8 @@ const turnAllinMoment = () =>
 const compareAllMoment = () => {
 	
 
-	all.map(date =>
-		all.map(dateToDiff => {
+	allMoments.map(date =>
+		allMoments.map(dateToDiff => {
 			if (JSON.stringify(date) !== JSON.stringify(dateToDiff)) 
 				allDistances.add(Math.abs(calculateDifferenceMoment(date, dateToDiff)))
 			 
@@ -53,7 +53,6 @@ const compareAllMoment = () => {
 
 const calculateDifferenceMoment = (date1: moment, date2: moment) => date1.diff(date2, 'days');
 
-const eeee = () => allDistances.reduce((acc, curr) =>  acc + curr);
 
 
 export {
@@ -66,7 +65,4 @@ export {
 
 turnAllinMoment();
 compareAllMoment();
-console.log(eeee());
-//console.log(allDistances);
 
-//console.log(calculateDifferenceMoment(a, b));
